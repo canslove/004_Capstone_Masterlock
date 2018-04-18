@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NYCDSA Team Project: Master Lock Reviews</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<style>
+body{
+  font-family: sans-serif;
+}
+</style>
+<body>
+  <div>
+    <h1>Project Overview:</h1>
+    <p>This project comprises an E-Commerce Data Analysis Report
+      along with raw data deliverables, and a reuseable data analytics interface,
+      to understand the web presence of a large-scale Consumer-Packaged Goods (CPG) company.
+    </p>
+  </div>
+  <div>
+  <h1>Goals and Business Questions</h1>
+    <ul>
+      <li>Establish a baseline of company's online presence in regard to a number of features. These include but are not limited to:</li>
+        <ul>
+          <li>Number of reviews per product</li>
+          <li>Star rating per product</li>
+          <li>Content of reviews per product</li>
+          <li>Content of product information on website</li>
+          <li>Content of advertisements/recommend items on website</li>
+          <li>Content of advertisements/recommend items on website</li>
+        </ul>
+    <li>What words drive satisfied or unsatisfied reviews?</li>
+    <li>What is the effect of product price on reviews, if any?</li>
+    <li>What retailers are most popular for which products?</li>
+    <li>Are there significant differences between retailers?</li>
+    </ul>
+  </div>
+  <div>
+    <h1> Project Solution</h1>
+    <p> Our data-driven approach to these business questions and goals involved the following
+        steps: (It is important to note that the craft of data science is a cyclical process,
+        so many of these steps were done, reiterated upon, and improved.)
+    <h3> Step 1: Data Mining</h3>
+      <ul>
+        <li>We gathered a detailed list of data we wanted to collect from each
+         retailer website- in order to best answer our business questions,
+         and achieve our project goals.</li>
+       <li>Working with web scraping software, we programmed scripts to collect
+         all relevant data from all retailers in question. This left us with over
+         30,000 rows of data that included reviews, dates, prices, product names, and meta
+         content about the retailer website.</li>
+      </ul>
+      <h3>Step 2: Understanding the Data</h3>
+      <p> Using a Python programming environment, our team was able to query and sort the collected data
+        answer some of the initial business questions that were asked.
+        <ul>
+          <li>Reviews
+            <ul>
+              <li>The team's approach to parsing product reviews, prices involved separating reviews into
+              categories that we already knew exist. Bad reviews, good reviews, one product sub-brand
+              to another.</li>
+              <li>We then used natural language processing algorithms (Regular-expression filtering,
+                Tf-Idf and Text Vectorization Statistics, Latent Dirichlet Allocation, Word2Vec modeling,
+                and K-Means clustering of word matrices) for estimating:
+                <ul>
+                  <li>the overall number of instances of a word, distributed by any factor (rating, price, product type), as it relates to a set of documents.</li>
+                  <li>the calculated importance of a word, as it relates to a set of documents.</li>
+                  <li>groups of words that are used in similar contexts.</li>
+                  <li>Words that appear often alongside other words.</li>
+                </ul>
+              </li>
+              <li>With this approach, the team was able to indicate specific topics that commonly occurred for any sub-group of ratings, and for any sub-group of products.
+                This led to data-driven conclusions about what people are saying about our companies products.</li>
+            </ul>
+          </li>
+          <li>Numerical and Categorical Data
+            <ul>
+              <li>With a cleaned dataset at our disposal, we were able to understand numerical statistics about our brand, here were some of our key methods:</li>
+                <ul>
+                  <li>Visualizing of one set of data compared to another (i.e; a rating-price relationship using a bar graph)</li>
+                  <li>Grouping the dataset by product, and sorting to calculate metrics such as items most reviewed across all websites.</li>
+                  <li>Grouping the dataset by price range, and understanding the rating and review context for lower cost items compared to higher cost ones.</li>
+                  <li>Aggregating the collected data in a way that was comparable across websites. Such as averaging the number of competitor brands that appeared in the "recommended" items box.</li>
+                  <li>Visualizing the total number of reviews per website over time.</li>
+                </ul>
+            </ul>
+          </li>
+        </ul>
+      <h3>Step 3: Sharing Insights</h3>
+        <p>An essential step in data analytics is operationalization. We wanted our findings to be easily accessible to our clients- without anyone having to dig into any code.
+           So we built a data processing toolkit in the form of a custom web application. The app can execute the same dataframe-filtering, aggregating,
+           and natural language processing methods our team explored, with a user-interface. Metrics can be produced by review keyword, product name, review rating, or any feature of our data set.
+           With an approach that ultimately seeks to generalize methods for gathering insight, we gave our clients the tools to explore the data on their own, as it suits their needs.</p>
+        <p>We were able to present our own findings in a succinct and actionable manner, with a slideshow report of our findings, and Tableau presentation.</p>
+  </div>
+</body>
+</html>
